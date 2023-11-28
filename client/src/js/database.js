@@ -19,7 +19,19 @@ const initdb = async () =>
 // object store name of object store (same as DB name but not always the case)
 // put the store content: id, info
 // await the request
-export const putDb = async (content) => console.error("putDb not implemented");
+export const putDb = async (content) => {
+  try {
+    console.log("PUT to the database");
+    const todosDb = await openDB("jate", 1);
+    const tx = todosDb.transaction("jate", "readwrite");
+    const store = tx.objectStore("jate");
+    const request = store.put({ id: id, info: content });
+    const result = await request;
+    console.log("Data saved to the database", result);
+  } catch (err) {
+    console.error("putDb not implemented");
+  }
+};
 
 // TODO: Add logic for a method that gets all the content from the database
 // add logic to get content
@@ -29,6 +41,19 @@ export const putDb = async (content) => console.error("putDb not implemented");
 // get the store 'getone' -1
 // await the request
 // return the results
-export const getDb = async () => console.error("getDb not implemented");
+export const getDb = async () => {
+  try {
+    console.log("GET from the database");
+    const todosDb = await openDB("jate", 1);
+    const tx = todosDb.transaction("jate", "readonly");
+    const store = tx.objectStore("jate");
+    const request = store.get(1);
+    const result = await request;
+    console.log("result.value", result);
+    return result;
+  } catch (err) {
+    console.error("getDb not implemented");
+  }
+};
 
 initdb();
