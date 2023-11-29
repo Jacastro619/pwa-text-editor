@@ -23,6 +23,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: "./index.html",
         title: "Webpack Plugin",
+        favicon: "./favicon.ico",
       }),
       new InjectManifest({
         swSrc: "./src-sw.js",
