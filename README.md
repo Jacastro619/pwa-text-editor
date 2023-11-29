@@ -16,6 +16,8 @@
 
 ## Description
 
+This is a PWA (Progressive Web Application) text editor that will persist any data typed into it. Data is stored via IndexedDB within the browser. This application is installable and can be used offline. It was created with the use of Webpack and has been deployed via Heroku. Once the application is installed, it can be used locally on the user's machine
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -26,7 +28,11 @@
 
 ## Installation
 
+To install the application, the user will simply run 'npm install' to download dependencies. Once the dependencies are installed, the user will run 'npm run start,' and the application will build the bundle in the dist folder. Once that completes, the server will be listening on the configured port.
+
 ## Usage
+
+Once the user opens the application, to use the text editor simply type anything into the application. The input will be automatically stored and chached into the browser and will persist into future visits. The application will still be available even if the user is offline. Once the user is back online all information that was typed in will also persist. If the user wishes to install the JATE text editor locally, they will click on the install button on the top right of the page, and JATE will be installed on the local machine.
 
 ## License
 
