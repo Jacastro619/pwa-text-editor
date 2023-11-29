@@ -16,6 +16,8 @@
 
 ## Description
 
+[Visit the deployed site here](https://jatepwa619-80c869ca8147.herokuapp.com/)
+
 This is a PWA (Progressive Web Application) text editor that will persist any data typed into it. Data is stored via IndexedDB within the browser. This application is installable and can be used offline. It was created with the use of Webpack and has been deployed via Heroku. Once the application is installed, it can be used locally on the user's machine
 
 ## Table of Contents
